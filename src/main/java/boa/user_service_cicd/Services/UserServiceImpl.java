@@ -73,7 +73,7 @@ public class UserServiceImpl implements UserService {
             user.setKycStatus(kycStatus);
             user.setUpdatedAt(LocalDateTime.now());
             return userRepository.save(user);
-        }).orElseThrow(() -> new RuntimeException("User not found"));
+        }).orElseThrow(() -> new RuntimeException("Given User not found in the database"));
     }
 }
 
